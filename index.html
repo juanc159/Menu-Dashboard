@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="style.css">
     <title>Sidebar Menu Dashboard</title>
 </head>
@@ -23,12 +24,29 @@
     </header>
     <!-- header area end -->
 
+    <!-- mobil navigation bar start -->
+    <div class="mobile_nav">
+        <div class="nav_bar">
+            <img src="1.png" alt="profile" class="mobile_profile_image">
+            <i class="fa fa-bars nav_btn"></i>
+        </div>
+        <div class="mobile_nav_items">
+            <a href="#"><i class="fas fa-desktop"></i><span>Dashboard</span></a>
+            <a href="#"><i class="fas fa-cogs"></i><span>Components</span></a>
+            <a href="#"><i class="fas fa-table"></i><span>Tables</span></a>
+            <a href="#"><i class="fas fa-th"></i><span>Forms</span></a>
+            <a href="#"><i class="fas fa-info-circle"></i><span>About</span></a>
+            <a href="#"><i class="fas fa-sliders-h"></i><span>Settings</span></a>
+        </div>
+    </div>
+    <!-- mobil navigation bar end -->
+
     <!-- sidebar start -->
     <div class="sidebar">
-        <center>
+        <div class="profile_info">
             <img src="1.png" alt="profile" class="profile_image">
             <h4>Moreno Guerra Juan Carlos</h4>
-        </center>
+        </div>
         <a href="#"><i class="fas fa-desktop"></i><span>Dashboard</span></a>
         <a href="#"><i class="fas fa-cogs"></i><span>Components</span></a>
         <a href="#"><i class="fas fa-table"></i><span>Tables</span></a>
@@ -38,6 +56,24 @@
     </div>
     <!-- sidebar end -->
 
-    <div class="content"></div>
+    <div class="content">
+        <div class="card">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem excepturi quae voluptates eos quasi tempora, hic maiores soluta error aperiam animi enim, velit alias quos ipsa dolorem veniam. Praesentium, obcaecati.</p>
+        </div>
+        <div class="card">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem excepturi quae voluptates eos quasi tempora, hic maiores soluta error aperiam animi enim, velit alias quos ipsa dolorem veniam. Praesentium, obcaecati.</p>
+        </div>
+        <div class="card">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem excepturi quae voluptates eos quasi tempora, hic maiores soluta error aperiam animi enim, velit alias quos ipsa dolorem veniam. Praesentium, obcaecati.</p>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+           $('.nav_btn') .click(function(){
+               $('.mobile_nav_items').toggleClass('active');
+           });
+        });
+    </script>
 </body>
 </html>
